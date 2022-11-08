@@ -14,5 +14,6 @@ public class GetRequest05_ManualOlarakSayfadanTokenAlarakSorgulama {
 
         Response response=given().headers("Authorization","Bearer "+token).when().get(url);
         response.prettyPrint();
+
     }
 }

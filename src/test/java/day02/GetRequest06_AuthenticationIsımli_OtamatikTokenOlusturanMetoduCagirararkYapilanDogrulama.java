@@ -15,7 +15,7 @@ public class GetRequest06_AuthenticationIsımli_OtamatikTokenOlusturanMetoduCagi
     @Test
     public void test06() {
         String url = "https://www.gmibank.com/api/tp-customers/114351";
-        Response response = given().headers("Authorization", "Bearer " + generateToken()).when().get(url);
+        Response response = given().headers("Authorization", "Bearer " +generateToken()).when().get(url);
         System.out.println("response.prettyPrint() = " + response.prettyPrint());
         //Matcher class ile müşteri bilgilerini doğrulayın
         response.then().assertThat().body("firstName",equalTo("Della"),
